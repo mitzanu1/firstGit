@@ -1,16 +1,12 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import actions from '../../store/actions'
 import  './interface.css'
 import {colors} from './colors'
 
 const Interface = () => {
 
-    let colorsArr = []
+    const colorsArr = Object.keys(colors)
 
-    useEffect(() => {
-        colorsArr = Object.keys(colors)
-    }, [])
-    
     const addSquare = () => {
      let posY = Math.floor((Math.random()*(window.innerHeight - 300)) + 100)
      let posX = Math.floor((Math.random()*(window.innerWidth - 300)) + 100)

@@ -1,37 +1,37 @@
 import { createStore } from 'redux'
-import _ from 'lodash'
+// import _ from 'lodash'
 import reducer from './reducer'
 
 // const PERSISTENT_PATHS = ['auth.token', 'language']
 
-const getValue = (path) => {
-  try {
-    return JSON.parse(localStorage.getItem(path))
-  } catch {
-    return undefined
-  }
-}
+// const getValue = (path) => {
+//   try {
+//     return JSON.parse(localStorage.getItem(path))
+//   } catch {
+//     return undefined
+//   }
+// }
 
-const setValue = (path, value) => {
-  try {
-    if (_.isNil(value)) throw new Error('no_value')
-    localStorage.setItem(path, JSON.stringify(value))
-  } catch {
-    localStorage.removeItem(path)
-  }
-}
+// const setValue = (path, value) => {
+//   try {
+//     if (_.isNil(value)) throw new Error('no_value')
+//     localStorage.setItem(path, JSON.stringify(value))
+//   } catch {
+//     localStorage.removeItem(path)
+//   }
+// }
 
-const deleteValue = (path) => localStorage.removeItem(path)
+// const deleteValue = (path) => localStorage.removeItem(path)
 
-const state = {}
 
 // PERSISTENT_PATHS.forEach((path) => _.setWith(
-//   state,
-//   path,
-//   getValue(path),
-//   Object
-// ))
-
+  //   state,
+  //   path,
+  //   getValue(path),
+  //   Object
+  // ))
+  const state = {}
+  
 const store = createStore(
   reducer,
   state,
