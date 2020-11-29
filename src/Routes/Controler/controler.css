@@ -1,0 +1,13 @@
+.controler {
+  text-align: center;
+  display: flexbox;
+  position: absolute;
+  background-color: white;
+  width: 200px;
+  height: 350px;
+}
+
+.controler p {
+  text-align: left;
+  margin-left: 1rem;
+}
