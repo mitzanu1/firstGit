@@ -12,10 +12,6 @@
   transition: top 2s linear, left 2s linear;
 }
 
-.circle p {
-  margin-top: 15%;
-  font-size: 50px;
-}
 .circle:focus {
   outline: 0;
   box-shadow: 0 0 3px 0.5px rgb(0, 0, 0);
@@ -26,6 +22,6 @@
 }
 
 .playground {
-  height: 800px;
+  height: 743px;
   border: solid 1px black;
 }

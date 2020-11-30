@@ -1,5 +1,5 @@
 import React from 'react'
-import actions from '../../store/actions'
+import actions from '../../../store/actions'
 import  './circle.css'
 import { useSelector } from 'react-redux'
 
@@ -9,7 +9,6 @@ const Circle = () => {
     const circle = useSelector(()=>actions.get('circleProps',{}))
     const {id} = circle
     const move = (e) => {
-        e.preventDefault()
         e.stopPropagation()
         const x = e.clientX
         const y = e.clientY
@@ -17,9 +16,6 @@ const Circle = () => {
             actions.update(`circles.${id}.posX`,(value)=> value = x)
             actions.update(`circles.${id}.posY`,(value)=> value = y)
         }
-    
-   
-        
     }
     return (<div className='playground' onClick={(e)=>move(e)}>
         {

@@ -1,12 +1,17 @@
 import './App.css';
-import Interface from './Routes/Interface/Interface';
 import React from 'react'
-import Circle from './Routes/Circle/Circle';
+import Navbar from './Routes/Navbar/Navbar';
+import { Route, Switch } from 'react-router-dom';
+import CircleApp from './Routes/CircleApp/CircleApp';
+import Home from './Routes/Home/Home';
 
 function App() {
   return <>
-    <Interface/>
-    <Circle/>
+    <Navbar/>
+    <Switch>
+      <Route exact path='/'><Home/></Route>
+      <Route path='/circles'><CircleApp/></Route>
+    </Switch>
   </>
 }
 
