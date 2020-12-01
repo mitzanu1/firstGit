@@ -1,0 +1,21 @@
+.clau-servicii {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background: rgba(208, 216, 234, 0.25);
+}
+
+.clau-servicii h1 {
+  margin: 0;
+  padding-top: 2rem;
+  font-size: 50px;
+  color: rgb(31, 2, 83);
+}
+
+.clau-servicii-cardgrid {
+  display: inline-grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}

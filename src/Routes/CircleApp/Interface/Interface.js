@@ -6,11 +6,10 @@ import {colors} from './colors'
 const Interface = () => {
 
     const colorsArr = Object.keys(colors)
-    const randomGen = (valueToRandomise,offSet) => Math.floor((Math.random()* valueToRandomise)) + offSet
     
     const addSquare = () => {
-     let posY = randomGen(window.innerHeight - 400, 300)
-     let posX = randomGen(window.innerWidth - 300, 100)
+     let posY = Math.floor((Math.random()*(window.innerHeight - 350)) + 225)
+     let posX = Math.floor((Math.random()*(window.innerWidth - 110)) + 10)
      let color = colorsArr[Math.floor((Math.random() * (colorsArr.length * 100))/100)]
      let textColor = colorsArr[Math.floor((Math.random() * (colorsArr.length * 100))/100)]
      const id = new Date().getTime().toString()

@@ -1,0 +1,11 @@
+.clau-hero {
+  position: relative;
+  text-align: left;
+  background: rgb(41, 41, 77);
+}
+
+.clau-hero img {
+  width: 100%;
+  opacity: 0.2;
+  min-height: 550px;
+}

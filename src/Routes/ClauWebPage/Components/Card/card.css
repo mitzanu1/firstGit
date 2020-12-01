@@ -1,0 +1,13 @@
+.card {
+  display: block;
+  text-align: left;
+  padding: 40px;
+  max-width: 270px;
+  height: 275px;
+  background: white;
+  box-shadow: 1px 1px 7px 0.1px rgb(216, 231, 231);
+}
+
+.card img {
+  width: 60px;
+}

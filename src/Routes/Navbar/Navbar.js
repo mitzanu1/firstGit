@@ -11,7 +11,7 @@ const Navbar = () => {
                 <Link to='/'>Apps</Link>
                 <div className='dropdown-content'>
                 <Link to='circles'>Circles</Link>
-                <Link to='/'>App 2</Link>
+                <Link to='clau-acasa'>Clau-webpage</Link>
                 <Link to='/'>App 3</Link>
                 <Link to='/'>App 4</Link>
             </div></li>

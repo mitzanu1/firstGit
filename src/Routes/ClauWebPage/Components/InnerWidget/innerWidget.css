@@ -1,0 +1,23 @@
+.clau-acasa-innerwidget {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  width: 500px;
+  overflow: hidden;
+}
+
+.clau-acasa-innerwidget article,
+h1,
+h4 {
+  margin-top: 0.75rem;
+  color: white;
+}
+
+.clau-acasa-innerwidget h1 {
+  font-weight: 900;
+  font-size: 40px;
+}
+.clau-acasa-innerwidget h4 {
+  font-weight: 600;
+  font-size: 20px;
+}
