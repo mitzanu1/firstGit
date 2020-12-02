@@ -1,23 +1,39 @@
 .clau-acasa-innerwidget {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
   position: absolute;
-  top: 50%;
-  right: 50%;
-  width: 500px;
-  overflow: hidden;
+  margin: auto;
 }
 
 .clau-acasa-innerwidget article,
 h1,
 h4 {
-  margin-top: 0.75rem;
+  max-width: 450px;
+  margin: 0;
   color: white;
+  margin: 5px 0;
 }
 
 .clau-acasa-innerwidget h1 {
   font-weight: 900;
-  font-size: 40px;
+  font-size: 2rem;
+  margin: 10px 0;
 }
 .clau-acasa-innerwidget h4 {
   font-weight: 600;
   font-size: 20px;
+}
+
+@media (max-width: 1024px) {
+  .clau-acasa-innerwidget {
+    width: 90%;
+    text-align: left;
+  }
+}
+@media (max-width: 768px) {
+  .clau-acasa-innerwidget {
+    align-items: center;
+    text-align: center;
+  }
 }

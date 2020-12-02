@@ -1,11 +1,24 @@
 .clau-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  text-align: left;
-  background: rgb(41, 41, 77);
+  height: 1080px;
+  background-color: #ffffff;
+  background-image: url("https://marketingfreedom.ro/wp-content/uploads/2020/06/home-hero-bg.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: inset 0 0 0 1000px rgba(21, 15, 58, 0.726);
 }
 
 .clau-hero img {
   width: 100%;
   opacity: 0.2;
-  min-height: 550px;
+}
+
+@media (max-width: 1024px) {
+  .clau-hero {
+    height: 500px;
+  }
 }

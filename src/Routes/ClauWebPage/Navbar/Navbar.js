@@ -1,18 +1,37 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './navbar.css'
+import {data} from './data'
+import uuid from 'react-uuid'
+
 
 const NavBar = () => {
     return (
         <div className='clau-navbar'>
-            <img src="clau-logo.png" alt=""/>
-            <ul>
-                <li><Link to='/clau-acasa'>Acasa</Link></li>
-                <li><Link to='/clau-desprenoi'>Despre Noi</Link></li>
-                <li><Link to='/clau-servicii'>Servicii</Link></li>
-                <li><Link to='/clau-portofoliu'>Portofoliu</Link></li>
-                <li><Link to='/clau-contact'>Contact</Link></li>
-            </ul>
+            <div className='img-row'>
+                <img src="clau-logo.png" alt=""/>
+            </div>
+
+            <div className='btn-row'>
+            {
+                data.map((ele)=>{
+                    const {title,link} = ele
+                    return <Link key={uuid()} to={link}>{title}</Link>
+                })
+            }
+            </div>
+
+            <div className='menu-row'>
+              <button className='navbar-dropdown-btn'><i className="fas fa-bars"></i></button>
+              <div className='navbar-dropdown'>
+            {
+                data.map((ele)=>{
+                    const {title,link} = ele
+                    return <Link key={uuid()} to={link}>{title}</Link>
+                })
+            }
+              </div>
+            </div>
         </div>
     )
 }

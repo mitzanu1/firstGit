@@ -1,3 +1,5 @@
+
+
 export const firstRow = [
     {
         content: 'Intră în comunitatea noastră gratuită de marketing online '
@@ -6,29 +8,25 @@ export const firstRow = [
 
 export const companie = [
     {
-        id: 21,
         title: 'Acasa',
         link: '/acasa'
     },
     {
-        id: 22,
         title: 'Despre noi',
         link: '/desprenoi'
     },
     {
-        id: 23,
         title: 'Servicii',
         link: '/servicii'
     },
     {
-        id: 24,
         title: 'Contact',
         link: '/contact'
     }
 ]
 
 export const contact = [
-    {
+    {   
         icon:'fas fa-envelope',
         content:'office@marketingfreedom.ro',
         link: 'mailto:office@marketingfreedom.ro',
