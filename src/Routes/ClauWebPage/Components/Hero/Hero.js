@@ -3,13 +3,12 @@ import InnerWidget from '../InnerWidget/InnerWidget'
 import './hero.css'
 
 const Hero = () => {
-    const [width, setWidth] = useState(window.innerWidth)
+    const [width, setWidth] = useState(window.innerWidth - 17)
     const [height, setHeight] = useState()
-
-    
+    const heroImgUrl = "clau-home.jpg"
 
  const resizedWindow = () => {
-    setWidth(window.innerWidth)
+    setWidth(window.innerWidth - 17)
     if(width > 1024) setHeight(window.innerHeight) 
     if(width <= 1024) setHeight(500)
     if(width < 768) setHeight(600)
@@ -21,7 +20,7 @@ const Hero = () => {
  })
  
     return (
-        <div className='clau-hero' style={{width:width,height:height}}>
+        <div className='clau-hero' style={{backgroundImage:`url(${heroImgUrl})`, width:width,height:height}}>
             <InnerWidget/>
         </div>
     )

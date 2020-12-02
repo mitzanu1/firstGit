@@ -35,7 +35,7 @@
   padding: 2rem 0.75rem 0 0.75rem;
 }
 
-.clau-navbar a:hover {
+.clau-navbar .btn-row a:hover {
   border-bottom: solid 3px rgb(56, 56, 218);
 }
 
@@ -52,7 +52,7 @@
   right: 1px;
   min-width: 300px;
   display: none;
-  background: rgba(203, 206, 247, 0.973);
+  background: rgba(230, 231, 247, 0.904);
   border-radius: 1rem;
   position: absolute;
   align-items: center;
