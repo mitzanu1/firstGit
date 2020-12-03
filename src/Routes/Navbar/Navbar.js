@@ -1,8 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import actions from '../../store/actions'
 import './navbar.css'
+import { useSelector } from 'react-redux'
+import firebase from 'firebase'
+
+
 
 const Navbar = () => {
+
+    
+    const user  = useSelector(()=>actions.get('auth',{}))
+
     return (
         <div className='navbar'>
             <ul>
@@ -16,7 +25,8 @@ const Navbar = () => {
                 <Link to='/'>App 4</Link>
             </div></li>
             </ul>
-            
+            <h1>Welcome {user.email}</h1>
+            <button onClick={()=>firebase.auth().signOut()}> Logout</button>
         </div>
     )
 }

@@ -9,6 +9,7 @@ import DespreNoi from './Routes/ClauWebPage/DespreNoi/DespreNoi';
 import Servicii from './Routes/ClauWebPage/Servicii/Servicii';
 import Portofoliu from './Routes/ClauWebPage/Portofoliu/Portofoliu';
 import Contact from './Routes/ClauWebPage/Contact/Contact';
+import LoginWidget from './Routes/LoginWidget/LoginWidget';
 
 function App() {
   return <>
@@ -22,7 +23,9 @@ function App() {
       <Route path='/clau-portofoliu'><Portofoliu/></Route>  
       <Route path='/clau-contact'><Contact/></Route> 
     </Switch>
+    <LoginWidget/>
   </>
 }
 
-export default App;
+export default App
+

@@ -32,6 +32,12 @@
   border-bottom: 4px solid rgb(28, 168, 250);
 }
 
+.navbar h1 {
+  font-size: 20px;
+  align-self: center;
+  margin: auto;
+}
+
 /* dropdown menu */
 
 .dropdown {
