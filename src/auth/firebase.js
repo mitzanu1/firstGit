@@ -43,4 +43,6 @@ const ui = new firebaseui.auth.AuthUI(firebase.auth())
 export const startFirebaseUI = function (widget) {
   ui.start(widget, uiConfig)
 }
+    startFirebaseUI('#firebase-ui-auth')
+
 

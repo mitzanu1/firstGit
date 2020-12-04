@@ -5,32 +5,80 @@ import './navbar.css'
 import { useSelector } from 'react-redux'
 import firebase from 'firebase'
 import {startFirebaseUI} from '../../auth/firebase.js'
-
-
+import {data} from './data.js'
+import uuid from 'react-uuid'
 
 const Navbar = () => {
 
     
-    const user  = useSelector(()=>actions.get('auth',{}))
-      startFirebaseUI('#firebase-ui-auth')
+    const user  = useSelector(()=>actions.get('auth',{})) 
+    const {email,authenticated,displayName} = user
+    const [showWidget,setShowWidget] = React.useState(false)
+    let initial = ''
+    if(authenticated) initial = displayName.split('',1)
+    // const changeName = () => firebase.auth().currentUser.updateProfile({displayName: "mitzanu"})
+    const changeName = () => {
+        console.log(firebase.auth().currentUser)
+    }
+    
 
     return (
         <div className='navbar'>
-            <ul>
-                <li><Link to="/">Home</Link></li>
-                <li className='dropdown'>
-                <Link to='/'>Apps</Link>
-                <div className='dropdown-content'>
-                <Link to='circles'>Circles</Link>
-                <Link to='clau-acasa'>Clau-webpage</Link>
-                <Link to='/'>App 3</Link>
-                <Link to='/'>App 4</Link>
-            </div></li>
-            </ul>
-            <h1>Welcome {user.email}</h1>
-            <button>LogIn</button>
-            <div id='firebase-ui-auth'> </div>
-            <button onClick={()=>firebase.auth().signOut()}> Logout</button>
+            <section className='link-box'>
+                <button onClick={changeName}>Change Name</button>
+                <div className='links'>
+                    {
+                        data.map((item) => {
+                            const {link:{name, link},dropdown} = item
+                                return (
+                                <div key={uuid()} className='dropdown'>
+                                    <Link  to={link}>{name}</Link>
+                                    <div className='dropdown-content'>
+                                    {
+                                        dropdown.map((item)=>{
+                                            const {link,name} = item
+                                            return (
+                                                    <Link key={uuid()} to={link}>{name}</Link>
+                                            )
+                                        })
+                                    }
+                                    </div>
+                                </div>
+                                )
+                        })
+                    }
+            
+                    
+                </div>
+            </section>
+
+            <section className='title-box'>
+                <h1>Welcome {displayName}</h1>
+            </section>
+
+            <section className='login-box'>
+                <div className='login'>
+                    {
+                      !authenticated &&  <button onClick={()=> setShowWidget(!showWidget)}>LogIn/SignIn</button>
+                    }
+                    {
+                       <div id='firebase-ui-auth' className='fb-login'></div>
+                    }
+                </div>
+                    {
+                        authenticated && <div className='navbar-profile'>
+                            <p>{email}</p>
+                            <div className='profile-dropdown'>
+                                    <button>{initial}</button>
+                                <div className='profile-dropdown-content'>
+                                    <button>Settings</button>
+                                    <button onClick={()=>firebase.auth().signOut()}> Logout</button>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                
+            </section>
         </div>
     )
 }
