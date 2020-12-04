@@ -11,6 +11,8 @@ import Contact from './Routes/ClauWebPage/Contact/Contact';
 import { Route, Switch } from 'react-router-dom';
 import claudiu from './auth/auth'
 
+let x = claudiu
+console.log(x)
 
 function App() {
   return <>

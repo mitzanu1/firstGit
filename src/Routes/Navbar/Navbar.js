@@ -3,14 +3,15 @@ import { Link } from 'react-router-dom'
 import actions from '../../store/actions'
 import './navbar.css'
 import { useSelector } from 'react-redux'
-import firebase from 'firebase'
+import firebase from 'firebase/app'
+import 'firebase/auth'
 import {startFirebaseUI} from '../../auth/firebase.js'
 import {data} from './data.js'
 import uuid from 'react-uuid'
 
 const Navbar = () => {
-
-    
+    let x = 2
+    if(x<0) startFirebaseUI('firebase-ui-auth')
     const user  = useSelector(()=>actions.get('auth',{})) 
     const {email,authenticated,displayName} = user
     const [showWidget,setShowWidget] = React.useState(false)
