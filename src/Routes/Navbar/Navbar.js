@@ -4,6 +4,7 @@ import actions from '../../store/actions'
 import './navbar.css'
 import { useSelector } from 'react-redux'
 import firebase from 'firebase'
+import {startFirebaseUI} from '../../auth/firebase.js'
 
 
 
@@ -11,6 +12,7 @@ const Navbar = () => {
 
     
     const user  = useSelector(()=>actions.get('auth',{}))
+      startFirebaseUI('#firebase-ui-auth')
 
     return (
         <div className='navbar'>
@@ -26,6 +28,8 @@ const Navbar = () => {
             </div></li>
             </ul>
             <h1>Welcome {user.email}</h1>
+            <button>LogIn</button>
+            <div id='firebase-ui-auth'> </div>
             <button onClick={()=>firebase.auth().signOut()}> Logout</button>
         </div>
     )

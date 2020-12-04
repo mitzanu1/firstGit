@@ -1,7 +1,6 @@
 import './App.css';
 import React from 'react'
 import Navbar from './Routes/Navbar/Navbar';
-import { Route, Switch } from 'react-router-dom';
 import CircleApp from './Routes/CircleApp/CircleApp';
 import Home from './Routes/Home/Home';
 import Acasa from './Routes/ClauWebPage/Acasa/Acasa';
@@ -9,7 +8,9 @@ import DespreNoi from './Routes/ClauWebPage/DespreNoi/DespreNoi';
 import Servicii from './Routes/ClauWebPage/Servicii/Servicii';
 import Portofoliu from './Routes/ClauWebPage/Portofoliu/Portofoliu';
 import Contact from './Routes/ClauWebPage/Contact/Contact';
-import LoginWidget from './Routes/LoginWidget/LoginWidget';
+import { Route, Switch } from 'react-router-dom';
+import caca from './auth/auth'
+
 
 function App() {
   return <>
@@ -23,7 +24,6 @@ function App() {
       <Route path='/clau-portofoliu'><Portofoliu/></Route>  
       <Route path='/clau-contact'><Contact/></Route> 
     </Switch>
-    <LoginWidget/>
   </>
 }
 
