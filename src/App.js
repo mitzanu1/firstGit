@@ -9,10 +9,10 @@ import Servicii from './Routes/ClauWebPage/Servicii/Servicii';
 import Portofoliu from './Routes/ClauWebPage/Portofoliu/Portofoliu';
 import Contact from './Routes/ClauWebPage/Contact/Contact';
 import { Route, Switch } from 'react-router-dom';
-import claudiu from './auth/auth'
+import caca from './auth/auth'
 
-let x = claudiu
-console.log(x)
+//  carpeala romaneasca 
+console.log(caca)
 
 function App() {
   return <>

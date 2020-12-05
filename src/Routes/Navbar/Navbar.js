@@ -9,24 +9,25 @@ import {startFirebaseUI} from '../../auth/firebase.js'
 import {data} from './data.js'
 import uuid from 'react-uuid'
 
+    // carpeala romaneasca
+const x = 0
+if (x>1) startFirebaseUI('firebase-ui-auth')
+
 const Navbar = () => {
-    let x = 2
-    if(x<0) startFirebaseUI('firebase-ui-auth')
+    
     const user  = useSelector(()=>actions.get('auth',{})) 
     const {email,authenticated,displayName} = user
     const [showWidget,setShowWidget] = React.useState(false)
     let initial = ''
     if(authenticated) initial = displayName.split('',1)
-    // const changeName = () => firebase.auth().currentUser.updateProfile({displayName: "mitzanu"})
-    const changeName = () => {
-        console.log(firebase.auth().currentUser)
-    }
+    // const changeName = newName => firebase.auth().currentUser.updateProfile({displayName: newName})
+    
     
 
     return (
         <div className='navbar'>
             <section className='link-box'>
-                <button onClick={changeName}>Change Name</button>
+                {/* <button onClick={changeName}>Change Name</button> */}
                 <div className='links'>
                     {
                         data.map((item) => {

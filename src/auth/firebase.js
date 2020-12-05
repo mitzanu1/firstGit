@@ -25,11 +25,16 @@ const uiConfig = {
            prompt: 'select_account'
             }
           },
-          firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-          firebase.auth.TwitterAuthProvider.PROVIDER_ID,
-          firebase.auth.GithubAuthProvider.PROVIDER_ID,
+          {
+          provider: firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+          scopes: [
+          'public_profile',
+          'email',
+          'user_likes',
+          'user_friends'
+          ]
+        },
           firebase.auth.EmailAuthProvider.PROVIDER_ID,
-          firebaseui.auth.AnonymousAuthProvider.PROVIDER_ID
         ],
         tosUrl: '<your-tos-url>',
         privacyPolicyUrl: function() {
@@ -44,6 +49,7 @@ const ui = new firebaseui.auth.AuthUI(firebase.auth())
 export const startFirebaseUI = function (widget) {
   ui.start(widget, uiConfig)
 }
-    startFirebaseUI('#firebase-ui-auth')
+
+startFirebaseUI('#firebase-ui-auth')
 
 
