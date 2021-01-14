@@ -27,7 +27,7 @@ const Circle = () => {
                 }
                 
                 return (
-                  <button key={id} className="circle" style={{left:posX,top:posY,background:color,color:textColor}} onClick={(e)=>setCircleProps(e)} ></button>
+                  <button key={id} className="circle" style={{right:posX,top:posY,background:color,color:textColor}} onClick={(e)=>setCircleProps(e)} ></button>
                 )
             })
         }

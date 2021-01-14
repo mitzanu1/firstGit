@@ -14,10 +14,10 @@ function App() {
   return <>
     <Navbar/>
     <Switch>
-      <Route path='/serviciiBv'><ServiciiBv/></Route>
       <Route exact path='/'><Home/></Route>
       <Route path='/circles'><CircleApp/></Route>
       <Route path='/sampleWebPage'><Acasa/></Route>
+      <Route path='/serviciiBv'><ServiciiBv/></Route>
       <Route path='/serviciiBv/admin'><Admin/></Route>
     </Switch>
   </>

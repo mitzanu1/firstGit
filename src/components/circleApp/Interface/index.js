@@ -9,7 +9,7 @@ const Interface = () => {
     const colorsArr = Object.keys(colors)
     
     const addCircle = () => {
-     let posY = Math.floor((Math.random()*(window.innerHeight - 350)) + 225)
+     let posY = Math.floor((Math.random()*(window.innerHeight - 350)) + 5)
      let posX = Math.floor((Math.random()*(window.innerWidth - 110)) + 10)
      let color = colorsArr[Math.floor((Math.random() * (colorsArr.length * 100))/100)]
      let textColor = colorsArr[Math.floor((Math.random() * (colorsArr.length * 100))/100)]

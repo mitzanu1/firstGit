@@ -10,6 +10,7 @@
   cursor: pointer;
   position: absolute;
   transition: top 2s linear, left 2s linear;
+  flex-wrap: wrap;
 }
 
 .circle:focus {
