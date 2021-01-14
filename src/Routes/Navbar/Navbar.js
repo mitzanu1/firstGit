@@ -15,14 +15,12 @@ const Navbar = () => {
     const [showWidget,setShowWidget] = React.useState(false)
     let initial = ''
     if(authenticated) initial = displayName.split('',1)
-    // const changeName = newName => firebase.auth().currentUser.updateProfile({displayName: newName})
     
     
 
     return (
         <div className='navbar'>
             <section className='link-box'>
-                {/* <button onClick={changeName}>Change Name</button> */}
                 <div className='links'>
                     {
                         data.map((item) => {
@@ -74,7 +72,6 @@ const Navbar = () => {
                             </div>
                         </div>
                     }
-                
             </section>
         </div>
     )
