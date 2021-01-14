@@ -18,7 +18,7 @@ function App() {
       <Route path='/circles'><CircleApp/></Route>
       <Route path='/sampleWebPage'><Acasa/></Route>
       <Route path='/serviciiBv'><ServiciiBv/></Route>
-      <Route path='/serviciiBv/admin'><Admin/></Route>
+      <Route path='/serviciiBv-admin'><Admin/></Route>
     </Switch>
   </>
 }

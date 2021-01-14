@@ -10,7 +10,6 @@
   cursor: pointer;
   position: absolute;
   transition: top 2s linear, left 2s linear;
-  flex-wrap: wrap;
 }
 
 .circle:focus {
@@ -24,6 +23,8 @@
 
 .playground {
   position: relative;
-  height: 743px;
   border: solid 1px black;
+  height: 700px;
+  width: 90%;
+  margin-left: 5%;
 }

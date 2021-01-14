@@ -10,11 +10,12 @@ const Circle = () => {
     const {id} = circle
     const move = (e) => {
         e.stopPropagation()
-        const x = e.clientX
-        const y = e.clientY
+        const x = (e.screenX / window.innerWidth * 100) - 6
+        const y = (e.screenY / window.innerHeight * 100) - 30
+        console.log(x,y)
         if(id){
-            actions.update(`circles.${id}.posX`,(value)=> value = x)
-            actions.update(`circles.${id}.posY`,(value)=> value = y)
+            actions.update(`circles.${id}.posX`,(value)=> value = x)  
+            actions.update(`circles.${id}.posY`,(value)=> value = y )
         }
     }
     return (<div className='playground' onClick={(e)=>move(e)}>
@@ -27,7 +28,7 @@ const Circle = () => {
                 }
                 
                 return (
-                  <button key={id} className="circle" style={{right:posX,top:posY,background:color,color:textColor}} onClick={(e)=>setCircleProps(e)} ></button>
+                  <button key={id} className="circle" style={{left:`${posX}%`,top:`${posY}%`,background:color,color:textColor}} onClick={(e)=>setCircleProps(e)} ></button>
                 )
             })
         }
