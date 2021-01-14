@@ -2,7 +2,7 @@ import firebase from 'firebase/app'
 import 'firebase/database'
 import 'firebase/auth'
 import 'firebase/storage'
-import  actions from '../store/actions'
+// import  actions from '../store/actions'
 
 const {
   REACT_APP_apiKey,
