@@ -1,0 +1,31 @@
+.clau-servicii {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  background: rgba(208, 216, 234, 0.25);
+}
+
+.clau-servicii h1 {
+  margin: 0;
+  padding-top: 2rem;
+  font-size: 50px;
+  color: rgb(31, 2, 83);
+}
+
+.clau-servicii-list {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 3rem 0;
+}
+
+@media (max-width: 1024px) {
+  .clau-servicii-list {
+    width: 100%;
+  }
+}

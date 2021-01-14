@@ -1,0 +1,16 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 2.5rem;
+  max-width: 270px;
+  height: 275px;
+  background: white;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  box-shadow: 1px 1px 7px 0.1px rgb(216, 231, 231);
+}
+
+.card img {
+  width: 60px;
+}

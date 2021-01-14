@@ -1,0 +1,18 @@
+.button {
+  background-color: rgb(175, 198, 240);
+  border: 0;
+  cursor: pointer;
+  padding: 0.25rem;
+}
+.button:focus {
+  background-color: #1890ff;
+  border-radius: 1rem;
+  outline: 0;
+}
+
+.catContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: rgb(175, 198, 240);
+}

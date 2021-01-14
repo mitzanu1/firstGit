@@ -1,0 +1,81 @@
+.clau-navbar {
+  display: flex;
+  background-color: #fff;
+  height: 5rem;
+}
+
+.img-row {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 auto;
+}
+
+.btn-row {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  margin: 0 auto;
+}
+
+.menu-row {
+  position: relative;
+  display: none;
+  align-items: center;
+
+  padding-right: 2rem;
+}
+
+.clau-navbar img {
+  width: 200px;
+}
+
+.clau-navbar a {
+  text-decoration: none;
+  color: black;
+  padding: 2rem 0.75rem 0 0.75rem;
+}
+
+.clau-navbar .btn-row a:hover {
+  border-bottom: solid 3px rgb(56, 56, 218);
+}
+
+.navbar-dropdown-btn {
+  background: transparent;
+  cursor: pointer;
+  font-size: 30px;
+  border: none;
+}
+
+.navbar-dropdown {
+  padding: 0;
+  top: 5rem;
+  right: 1px;
+  min-width: 300px;
+  display: none;
+  background: rgba(230, 231, 247, 0.904);
+  border-radius: 1rem;
+  position: absolute;
+  align-items: center;
+  z-index: 1;
+}
+
+.navbar-dropdown a {
+  margin: 0;
+  padding: 0.5rem;
+  font-size: 2rem;
+  color: rgb(12, 6, 61);
+}
+
+.menu-row:focus-within .navbar-dropdown {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .btn-row {
+    display: none;
+  }
+  .menu-row {
+    display: flex;
+  }
+}

@@ -1,0 +1,42 @@
+.clau-acasa-innerwidget {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  position: absolute;
+  margin: auto;
+}
+
+.clau-acasa-innerwidget article,
+h1,
+h4 {
+  max-width: 450px;
+  margin: 0;
+  color: white;
+  margin: 5px 0;
+}
+.clau-acasa-innerwidget article {
+  color: #d0d8ea;
+}
+.clau-acasa-innerwidget h1 {
+  font-weight: 900;
+  font-size: 2rem;
+  margin: 10px 0;
+}
+.clau-acasa-innerwidget h4 {
+  font-weight: 600;
+  font-size: 20px;
+  color: #d0d8ea;
+}
+
+@media (max-width: 1024px) {
+  .clau-acasa-innerwidget {
+    width: 90%;
+    text-align: left;
+  }
+}
+@media (max-width: 768px) {
+  .clau-acasa-innerwidget {
+    align-items: center;
+    text-align: center;
+  }
+}

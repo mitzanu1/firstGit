@@ -1,0 +1,72 @@
+.card {
+  background-color: #fff;
+  max-width: 600px;
+  text-align: left;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px 1px rgb(191, 192, 192);
+  padding: 0.5rem 0;
+  margin: 1rem;
+}
+.card h3 {
+  margin: auto;
+  text-align: left;
+  padding-left: 1rem;
+}
+.card button {
+  margin-left: 1rem;
+  background-color: #fff;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.card button:focus {
+  outline: 0;
+}
+.adresa {
+  display: flex;
+  width: 100%;
+}
+
+.adresa p {
+  width: 80%;
+  text-align: left;
+  padding-left: 1rem;
+  margin: 0;
+  align-self: center;
+}
+
+.gmap {
+  width: 75px;
+  height: 35px;
+  cursor: pointer;
+  align-self: center;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  background-color: rgba(143, 140, 140, 0.192);
+}
+
+.modal iframe {
+  align-self: center;
+  margin-top: 10rem;
+  width: 95%;
+  height: 60%;
+  border: 0;
+}
+.modal button {
+  background-color: transparent;
+  font-size: large;
+  margin-top: 1rem;
+}
+
+.header h1 {
+  color: black;
+}
